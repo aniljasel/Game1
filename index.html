@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="wellcome.css">
+    <script>
+        // Redirect to the main page after 20 seconds
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 15000); // 15 seconds
+    </script>
+</head>
+<body>
+    <div class="welcome-container">
+        <img src="media/profile_pic.jpg" alt="Profile Picture">
+        <h2>Mr. Anil Kumar</h2>
+        <h1>Welcome to the Number Guessing Game!</h1>
+        <p>Let's dive into some fun and challenges!</p>
+    </div>
+    <canvas id="backgroundCanvas"></canvas>
+</body>
+<script src="wellcome.js"></script>
+</html>
