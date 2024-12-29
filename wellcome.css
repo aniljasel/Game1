@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Welcome Page Styles */
+body {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Default background color */
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.welcome-container {
+    position: relative;
+    z-index: 1; /* Keep text above the canvas */
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-container h1 {
+        font-size: 2rem;
+    }
+    .welcome-container h2 {
+        font-size: 1.5rem;
+    }
+    .welcome-container p {
+        font-size: 1rem;
+    }
+    .welcome-container img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-container h1 {
+        font-size: 1.8rem;
+    }
+    .welcome-container h2 {
+        font-size: 1.2rem;
+    }
+    .welcome-container p {
+        font-size: 0.9rem;
+    }
+    .welcome-container img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Background Canvas */
+#backgroundCanvas {
+    position: absolute;
+    top: 50%; /* Center canvas vertically */
+    left: 50%; /* Center canvas horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true center alignment */
+    width: 1920px; /* Fixed width */
+    height: 1080px; /* Fixed height */
+    z-index: 0; /* Place it below all other elements */
+    pointer-events: none; /* Ensure it doesn't block user interaction */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
